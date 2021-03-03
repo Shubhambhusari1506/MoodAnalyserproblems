@@ -6,18 +6,17 @@ public class MoodanalyserTest {
 
     Moodanalyser mood;
 
-    @BeforeEach
-    public void objectMethod(){
-
-        mood = new Moodanalyser();
-
-    }
-
     @Test
     public void testSadMood(){
 
-        System.out.println(mood.analyseMood("I am in sad mood"));
+        mood = new Moodanalyser(null);
+
+        System.out.println(mood.analyseMood());
 
     }
-
+    @Test
+    public void testHappyMood(){
+        mood = new Moodanalyser("I am in Happy mood");
+        System.out.println(mood.analyseMood());
+    }
 }
