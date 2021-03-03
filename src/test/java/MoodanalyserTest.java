@@ -13,4 +13,13 @@ public class MoodanalyserTest {
 
 
     }
+    @Test
+    public void testHappyMood(){
+
+        mood = new Moodanalyser("I am in Happy mood");
+
+        System.out.println(mood.analyseMood());
+
+    }
+
 }
