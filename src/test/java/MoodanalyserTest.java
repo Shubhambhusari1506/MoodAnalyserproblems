@@ -7,11 +7,10 @@ public class MoodanalyserTest {
     Moodanalyser mood;
 
     @Test
-    public void testSadMood() {
-
-        mood = new Moodanalyser(null);
-
+    public void testSadMood(){
+        mood = new Moodanalyser("I am in sad mood");
         System.out.println(mood.analyseMood());
+
 
     }
 }
