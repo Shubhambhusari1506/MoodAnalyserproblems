@@ -1,5 +1,5 @@
 import com.bridgelabz.moodanalyzerproblem.Moodanalyser;
-import org.junit.jupiter.api.BeforeEach;
+import com.bridgelabz.moodanalyzerproblem.MoodanalyserException;
 import org.junit.jupiter.api.Test;
 
 public class MoodanalyserTest {
@@ -7,26 +7,13 @@ public class MoodanalyserTest {
     Moodanalyser mood;
 
 
-    @BeforeEach
-    public void objectMethod() {
-        mood = new Moodanalyser();
-    }
-
-
-        @Test
-    public void testSadMood(){
-
-        System.out.println("i am sad in mood ");
-
-
-    }
     @Test
-    public void testHappyMood(){
+    public void testSadMood() throws MoodanalyserException {
 
+        mood = new Moodanalyser("");
 
+        System.out.println(mood.analyseMood());
 
-        System.out.println("I am in happy mood");
 
     }
-
 }

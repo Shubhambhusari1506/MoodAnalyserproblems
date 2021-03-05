@@ -2,15 +2,29 @@ package com.bridgelabz.moodanalyzerproblem;
 
 public class Moodanalyser {
 
+    public String message;
+    public Moodanalyser(String message) {
 
-        public String analyseMood(String message){
+        this.message = message;
 
-            if (message.contains("sad")){
-
-                return "SAD";
-            }
-            else {
-                return "HAPPY";
-            }
-        }
     }
+    public String analyseMood() throws MoodanalyserException {
+
+        try {
+            if(message == (null)){
+                throw new MoodanalyserException("Invalid mood");
+            }
+            return message.contains("sad") ? "SAD" : "HAPPY";
+
+        }
+        catch (MoodanalyserException e) {
+            return "Exception got handled";
+
+        }
+
+    }
+
+
+}
+
+
